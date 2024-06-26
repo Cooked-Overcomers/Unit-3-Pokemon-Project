@@ -23,26 +23,6 @@ const fetchDataNames = async () => {
       console.warn("failed to fetch pokemon name")
     }
   })
-
-
-
-  
-  // const fetchedPokemonDetails = first20Pokemon.map(pokemon => fetchPokemonDetails(pokemon.name));
-  // const allPokemonDetails = await Promise.all(fetchedPokemonDetails);
-
-  // const allInfo = allPokemonDetails.map(details => {
-  //   if (details) {
-  //     return {
-  //       name: details.name,
-  //       images: details.sprites.front_default,
-  //       height: details.height,
-  //       weight: details.weight,
-  //     };
-  //   }
-  //   return null;
-  // });
-
-  // console.log(allInfo);
 };
 
 // This is a helper function bc it is a reusable 

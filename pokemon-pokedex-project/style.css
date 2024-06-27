@@ -42,6 +42,7 @@ h2 {
   color: #e1ad01;
   font-size: 23px;
   margin-top: 50px;
+  padding: 1rem;
 }
 
 
@@ -79,7 +80,7 @@ h2 {
 li {
   border: 0.2rem solid rgb(182, 130, 234);
   margin-bottom: 40px;
-  width: 250px;
+  width: 235px;
   height: 200px;
   display: flex;
   align-items: center;
@@ -98,7 +99,7 @@ ul {
 }
 
 #random {
-  width: 35%;
+  width: 39%;
   /* Make the image fit the container */
   transition: transform 2s ease-in-out;
   /* Smooth transition for transform */
@@ -125,8 +126,16 @@ ul {
   }
 }
 
-.tag {
-  font-size: medium;
-  display: flex;
+
+p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1px;
+  font-size: 13px;
+}
+
+h3 {
+  color: aliceblue;
+  padding-bottom: 0.8rem
 
 }

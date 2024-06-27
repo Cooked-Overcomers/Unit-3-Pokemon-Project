@@ -28,6 +28,4 @@ const fetchPokemonDetails = async (name) => {
 };
 
 
-
-
 export { fetchData, fetchPokemonDetails };

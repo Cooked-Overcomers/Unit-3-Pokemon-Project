@@ -38,9 +38,11 @@ const createPokemonCard = (pokemonDetails) => {
 
   const weight = document.createElement("p")
   weight.textContent = `Weight: ${pokemonDetails.weight}`
+  
 
   const pokemonType = document.createElement('p')
   pokemonType.textContent = `Type(s): ${pokemonDetails.types.map(type => type.type.name).join(', ')}`// 
+
 
   const regularPokemonImages = pokemonImages(pokemonDetails.sprites.front_default)
   const shinyPokemonImages = pokemonImages(pokemonDetails.sprites.front_shiny)
@@ -87,6 +89,7 @@ const pokemonImages = (imageSource) => {
   const imageElement = document.createElement("img")
   // add the src attribute
   imageElement.src = imageSource
+  imageElement.id = "random"
   imageElement.alt = "pokemon-image"
   imageElement.title = "click on me"
   // gives the class name
@@ -142,7 +145,7 @@ const searchValue = async (e) => {
   console.log(accessSubmit)
   const userInput = await fetchPokemonDetails(accessSubmit) // taking in what the user has input in the search bar
 
-  const accessResult = document.querySelector('#search-pokemon')
+  const accessResult = document.querySelector('#search-list')
   const searchCard = createPokemonCard(userInput)
   accessResult.append(searchCard)
 

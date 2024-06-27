@@ -2,4 +2,73 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #1f1b1b;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  /* Center align horizontally */
+  align-items: center;
+  padding: 1rem;
+  height: 100px;
+  border-style: line;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 3px;
+  color: #e1ad01;
+  background-color: #1f1b1b;/
+}
+
+nav h1 {
+  text-shadow:
+    1px 1px 0 blue,
+    -1px -1px 0 blue,
+    1px -1px 0 blue,
+    -1px 1px 0 blue;
+  font-size: 50px;
+
+}
+
+/* #defaul-title.outline-text {
+  outline-color: blue;
+  outline-width: 2px;
+} */
+
+h2 {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 3px;
+  color: #e1ad01;
+  font-size: 23px;
+  margin-top: 50px;
+}
+
+
+#search-bar {
+  position: absolute;
+  top: 10px;
+  /* Adjust top position as needed */
+  right: 20px;
+  /* Adjust right position as needed */
+  display: flex;
+  align-items: center;
+}
+
+#pokemon-search {
+  background-color: white;
+  border: 1px solid black;
+  /* Example border styling */
+  padding: 8px;
+  /* Example padding */
+  border-radius: 4px;
+  /* Example border radius */
+}
+
+.search-button {
+  margin-left: 5px;
+  background-color: grey;
+  border-radius: 5px;
+  width: 75px;
+  height: 30px;
+  /* Example margin for button */
 }

@@ -9,12 +9,13 @@
   <script src="fetchData.js" type="module"></script>
   <script src="dom.js" type="module"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.cdnfonts.com/css/pokemon-hollow" rel="stylesheet">
 </head>
 
 <body>
   <main>
     <nav>
-      <h1>Finder</h1>
+      <h1>ShinyDex</h1>
       <form id="search-bar">
         <label for="search-bar">Search</label>
         <input type="text" id="pokemon-search" class="search-input" placeholder="Pokemon Name">
@@ -22,11 +23,11 @@
       </form>
     </nav>
     <section id="default-pokemon-name" aria-labelledby="defualt-title">
-      <h2 id="defaul-title">Pokemon</h2>
+      <h2 id="defaul-title">Find Shiny</h2>
       <ul id="fetch-cards"></ul>
     </section>
     <section id="search-results-section" aria-label="search-pokemon">
-      <h2 id="search-pokemon">Here is Your Pokemon</h2>
+      <h2 id="search-pokemon">Here is Your Pokemon!</h2>
       <ul id="search-list"></ul>
     </section>
   </main>

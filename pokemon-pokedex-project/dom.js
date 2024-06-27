@@ -47,7 +47,7 @@ const createPokemonCard = (pokemonDetails) => {
 
   shinyPokemonImages.style.display = "none"
 
-  // flag that is 
+  // flag that is already equal to true
   let isRegular = true;
 
   // wether to display the shiny or regular
@@ -141,7 +141,7 @@ const searchValue = async (e) => {
   const accessSubmit = document.querySelector("#pokemon-search").value // accessing the submit button
   console.log(accessSubmit)
   const userInput = await fetchPokemonDetails(accessSubmit) // taking in what the user has input in the search bar
-  
+
   const accessResult = document.querySelector('#search-pokemon')
   const searchCard = createPokemonCard(userInput)
   accessResult.append(searchCard)

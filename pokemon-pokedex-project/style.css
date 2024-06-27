@@ -1,7 +1,8 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 20;
   box-sizing: border-box;
+
   background-color: #1f1b1b;
 }
 
@@ -71,4 +72,52 @@ h2 {
   width: 75px;
   height: 30px;
   /* Example margin for button */
+}
+  
+}
+
+
+li{
+  border: 0.2rem solid rgb(182, 130, 234);
+  margin-bottom: 40px;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: lavendar;
+  color: black;
+}
+
+ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  color: black;
+}
+
+  #random {
+    width: 35%; /* Make the image fit the container */
+    transition: transform 2s ease-in-out; /* Smooth transition for transform */
+  }
+  /* Apply animation on hover */
+  #random:hover {
+    animation: moveUpDown 2s infinite ease-in-out; /* Apply animation */
+  }
+  /*animation */
+  @keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Starting position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+  }
+
+.tag{
+  font-size: medium;
+  display: flex;
+
 }

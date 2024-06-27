@@ -49,7 +49,7 @@ const createPokemonCard = (pokemonDetails) => {
 
   shinyPokemonImages.style.display = "none"
 
-  // flag that is already equal to true
+  // flag that is 
   let isRegular = true;
 
   // wether to display the shiny or regular
@@ -113,31 +113,31 @@ const pokemonImages = (imageSource) => {
 // titleLogo.append(titleLogoElement)
 
 // Function to create the image element
-const titleLogo = (wikiImage) => {
-  const titleLogoElement = document.createElement("img");
-  titleLogoElement.src = wikiImage;
-  titleLogoElement.alt = "pokemon-logo";
-  titleLogoElement.id = "logo";
-  titleLogoElement.classList.add("image");
+// const titleLogo = (wikiImage) => {
+//   const titleLogoElement = document.createElement("img");
+//   titleLogoElement.src = wikiImage;
+//   titleLogoElement.alt = "pokemon-logo";
+//   titleLogoElement.id = "logo";
+//   titleLogoElement.classList.add("image");
 
-  return titleLogoElement;
-};
+//   return titleLogoElement;
+// };
 
 // URL of the logo
-const wikiImage = 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg';
+// const wikiImage = 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg';
 
-// Create the image element
-const logoElement = titleLogo(wikiImage);
+// // Create the image element
+// const logoElement = titleLogo(wikiImage);
 
-// Function to append the logo to a specific container
-const appendingPokemonLogo = () => {
-  const navElement = document.querySelector("nav");
-  if (navElement) {
-    navElement.prepend(logoElement);
-  } else {
-    console.error('Nav element not found.');
-  }
-};
+// // Function to append the logo to a specific container
+// const appendingPokemonLogo = () => {
+//   const navElement = document.querySelector("nav");
+//   if (navElement) {
+//     navElement.prepend(logoElement);
+//   } else {
+//     console.error('Nav element not found.');
+//   }
+// };
 
 const searchValue = async (e) => {
   e.preventDefault()
@@ -158,5 +158,5 @@ accessForm.addEventListener('submit', searchValue) //
 
 
 // Calling the functions
-appendingPokemonLogo();
+// appendingPokemonLogo();
 fetchDataNames();

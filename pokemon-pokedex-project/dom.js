@@ -51,15 +51,14 @@ const createPokemonCard = (pokemonDetails) => {
   let isRegular = true;
 
   // wether to display the shiny or regular
-  // if true it will display regular
-  // if false it will display shiny
-  //true and false 
+
+
   card.addEventListener("click", () => {
-    isRegular = !isRegular // 
-    if(!isRegular){
+    isRegular = !isRegular // Toggle the value of isRegular (true becomes false, and vice versa)
+    if(!isRegular){ // if true it will display regular
       shinyPokemonImages.style.display = "block"
       regularPokemonImages.style.display = "none"
-    } else  {
+    } else  { // if false it will display shiny
       shinyPokemonImages.style.display = "none"
       regularPokemonImages.style.display = "block"
     }
@@ -89,6 +88,7 @@ const imageElement = document.createElement("img")
 // add the src attribute
 imageElement.src = imageSource
 imageElement.alt =  "pokemon-image"
+imageElement.title = "click on me"
 // gives the class name
 imageElement.classList.add("image")
 
@@ -96,4 +96,64 @@ return imageElement
 
 
 }
-fetchDataNames()
+
+// const titleLogo = (wikiImage) => {
+//   const titleLogoElement = document.createElement("img")
+//   titleLogoElement.src = wikiImage
+//   titleLogoElement.alt = "pokemon-logo"
+//   titleLogoElement.id = "logo"
+//   titleLogoElement.classList.add("image")
+
+//   return titleLogoElement
+// }
+
+// titleLogo.append(titleLogoElement)
+
+// Function to create the image element
+const titleLogo = (wikiImage) => {
+  const titleLogoElement = document.createElement("img");
+  titleLogoElement.src = wikiImage;
+  titleLogoElement.alt = "pokemon-logo";
+  titleLogoElement.id = "logo";
+  titleLogoElement.classList.add("image");
+
+  return titleLogoElement;
+};
+
+// URL of the logo
+const wikiImage = 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg';
+
+// Create the image element
+const logoElement = titleLogo(wikiImage);
+
+// Function to append the logo to a specific container
+const appendingPokemonLogo = () => {
+  const navElement = document.querySelector("nav");
+  if (navElement) {
+    navElement.prepend(logoElement); 
+  } else {
+    console.error('Nav element not found.');
+  }
+};
+
+const searchValue = async (e) => {
+  e.preventDefault()
+  const accessSubmit = document.querySelector("#pokemon-search").value // accessing the submit button
+  console.log(accessSubmit)
+  const userInput = await fetchPokemonDetails(accessSubmit) // taking in what the user has input in the search bar
+  
+  const accessResult = document.querySelector('#search-pokemon')
+  const searchCard = createPokemonCard(userInput)
+  accessResult.append(searchCard)
+
+  
+  }
+
+const accessForm = document.querySelector("#search-bar") // accessing the form id 
+accessForm.addEventListener('submit', searchValue) //
+
+
+
+// Calling the functions
+appendingPokemonLogo();
+fetchDataNames();

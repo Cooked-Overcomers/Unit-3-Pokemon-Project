@@ -19,6 +19,7 @@ const fetchData = async (url, options = {}) => {
 const fetchPokemonDetails = async (name) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
   const [data, error] = await fetchData(url);
+  console.log(data)
   if (error) {
     console.error('Cannot fetch details for', name);
     return null;

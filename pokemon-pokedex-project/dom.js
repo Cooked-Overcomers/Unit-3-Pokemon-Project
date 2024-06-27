@@ -55,16 +55,16 @@ const createPokemonCard = (pokemonDetails) => {
 
   card.addEventListener("click", () => {
     isRegular = !isRegular // Toggle the value of isRegular (true becomes false, and vice versa)
-    if(!isRegular){ // if true it will display regular
+    if (!isRegular) { // if true it will display regular
       shinyPokemonImages.style.display = "block"
       regularPokemonImages.style.display = "none"
-    } else  { // if false it will display shiny
+    } else { // if false it will display shiny
       shinyPokemonImages.style.display = "none"
       regularPokemonImages.style.display = "block"
     }
   })
 
- 
+
 
   // const type = document.createElement("p")
   card.append(name)
@@ -73,7 +73,7 @@ const createPokemonCard = (pokemonDetails) => {
   card.appendChild(height)
   card.appendChild(weight)
   card.appendChild(pokemonType)
-  
+
 
   return card
   //   const img = document.createElement('img')
@@ -83,16 +83,16 @@ const createPokemonCard = (pokemonDetails) => {
 // Making the images
 
 const pokemonImages = (imageSource) => {
-// creating the img tag
-const imageElement = document.createElement("img")
-// add the src attribute
-imageElement.src = imageSource
-imageElement.alt =  "pokemon-image"
-imageElement.title = "click on me"
-// gives the class name
-imageElement.classList.add("image")
+  // creating the img tag
+  const imageElement = document.createElement("img")
+  // add the src attribute
+  imageElement.src = imageSource
+  imageElement.alt = "pokemon-image"
+  imageElement.title = "click on me"
+  // gives the class name
+  imageElement.classList.add("image")
 
-return imageElement
+  return imageElement
 
 
 }
@@ -130,7 +130,7 @@ const logoElement = titleLogo(wikiImage);
 const appendingPokemonLogo = () => {
   const navElement = document.querySelector("nav");
   if (navElement) {
-    navElement.prepend(logoElement); 
+    navElement.prepend(logoElement);
   } else {
     console.error('Nav element not found.');
   }
@@ -146,8 +146,8 @@ const searchValue = async (e) => {
   const searchCard = createPokemonCard(userInput)
   accessResult.append(searchCard)
 
-  
-  }
+
+}
 
 const accessForm = document.querySelector("#search-bar") // accessing the form id 
 accessForm.addEventListener('submit', searchValue) //

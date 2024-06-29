@@ -52,6 +52,7 @@ export const pokemonImages = (imageSource) => {
   const imageElement = document.createElement("img");
   imageElement.src = imageSource;
   imageElement.alt = "pokemon-image";
+  imageElement.id ='random'
   imageElement.classList.add("image");
 
   return imageElement;

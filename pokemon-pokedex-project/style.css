@@ -2,10 +2,8 @@
   margin: 0;
   padding: 20;
   box-sizing: border-box;
-
   background-color: #1f1b1b;
 }
-
 
 nav {
   display: flex;
@@ -18,7 +16,7 @@ nav {
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 3px;
   color: #e1ad01;
-  background-color: #1f1b1b;/
+  background-color: #1f1b1b;
 }
 
 nav h1 {
@@ -28,7 +26,6 @@ nav h1 {
     1px -1px 0 blue,
     -1px 1px 0 blue;
   font-size: 50px;
-
 }
 
 /* #defaul-title.outline-text {
@@ -44,7 +41,6 @@ h2 {
   margin-top: 50px;
   padding: 1rem;
 }
-
 
 #search-bar {
   position: absolute;
@@ -74,8 +70,6 @@ h2 {
   height: 30px;
   /* Example margin for button */
 }
-
-
 
 li {
   border: 0.2rem solid rgb(182, 130, 234);
@@ -112,19 +106,15 @@ ul {
 
 /*animation */
 @keyframes moveUpDown {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
     /* Starting position */
   }
-
   50% {
     transform: translateY(-10px);
     /* Move up */
   }
 }
-
 
 p {
   color: white;
@@ -135,6 +125,5 @@ p {
 
 h3 {
   color: aliceblue;
-  padding-bottom: 0.8rem
-
+  padding-bottom: 0.8rem;
 }
